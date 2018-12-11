@@ -1,4 +1,4 @@
-"""blogpage URL Configuration
+"""reddit URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -13,16 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
-import posts.views
-import sitepages.views
-from django.conf.urls.static import static
-from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', posts.views.home, name="home"),
-    url(r'^posts/(?P<post_id>[0-9]+)/$', posts.views.post_details, name="post_detail"),
-    url(r'^about/', sitepages.views.about, name="about")
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    url(r'^accounts/', include('accounts.urls')),
+    url(r'^posts/', include('posts.urls')),
+]

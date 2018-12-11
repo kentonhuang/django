@@ -47,33 +47,15 @@
 
     <div class="container bg-light">
       <br />
-      <h1>{{ post.title }}</h1></a>
-      <h4><span class="fas fa-clock"></span> {{ post.pub_date_pretty }}</h4>
-      <br />
-      <img src="{{ post.image.url }}" class="rounded mx-auto d-block img-fluid" style="max-height: 300px"/>
-      <br />
-      <p>{{ post.body }}</p>
-      <br />
-      <hr />
-
-      <div id="disqus_thread"></div>
-      <script>
-
-      var disqus_config = function () {
-      this.page.identifier = 'post-{{ post.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-      };
-      (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://cooltestbloggeroni.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-      })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+      <h1 class="text-center">About</h1>
       
 
+      <h2>This is a test blog for Django course</h2>
+      <hr />
+
+     
+    </div>
+  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -82,3 +64,4 @@
 
   </body>
 </html>
+
