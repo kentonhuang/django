@@ -25,7 +25,11 @@ SECRET_KEY = 'p@p=sx3if8%a1&q96z-^a5nl7ejorp767v^e4n%%n0t9u6hfo='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'c908b188.ngrok.io',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -56,7 +60,7 @@ ROOT_URLCONF = 'reddit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
